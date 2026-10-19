@@ -1,9 +1,190 @@
-{"guncelleme":null,
-"fiyatlar":[
-{"platform":"spotify","paket":"Bireysel","fiyat":99,"kisi_sayisi":1,"ornek":true},
-{"platform":"spotify","paket":"Duo","fiyat":129,"kisi_sayisi":2,"ornek":true},
-{"platform":"spotify","paket":"Aile","fiyat":159,"kisi_sayisi":6,"ornek":true},
-{"platform":"spotify","paket":"Öğrenci","fiyat":49,"kisi_sayisi":1,"ornek":true}],
-"firsatlar":[
-{"platform":"spotify","baslik":"3 ay %50 indirim","kod":"[KUPON KODU]","bitis":"2026-11-30","ornek":true},
-{"platform":"youtube","baslik":"Öğrenci paketinde 1 ay ücretsiz","kod":"[KUPON KODU]","bitis":"2026-12-15","ornek":true}]}
+{
+ "guncelleme": "2026-10-19",
+ "fiyatlar": [
+  {
+   "platform": "netflix",
+   "paket": "Temel",
+   "fiyat": 259.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.tamindir.com/blog/netflix-uyelik-ucretleri_72683/",
+   "not": "720p · 1 ekran"
+  },
+  {
+   "platform": "netflix",
+   "paket": "Standart",
+   "fiyat": 389.99,
+   "kisi_sayisi": 2,
+   "kaynak": "https://www.tamindir.com/blog/netflix-uyelik-ucretleri_72683/",
+   "not": "1080p · 2 ekran"
+  },
+  {
+   "platform": "netflix",
+   "paket": "Premium",
+   "fiyat": 499.99,
+   "kisi_sayisi": 4,
+   "kaynak": "https://www.tamindir.com/blog/netflix-uyelik-ucretleri_72683/",
+   "not": "4K · 4 ekran"
+  },
+  {
+   "platform": "spotify",
+   "paket": "Bireysel",
+   "fiyat": 115,
+   "kisi_sayisi": 1,
+   "kaynak": "https://abonelikfiyatlari.com/servis/spotify"
+  },
+  {
+   "platform": "spotify",
+   "paket": "Öğrenci",
+   "fiyat": 60,
+   "kisi_sayisi": 1,
+   "kaynak": "https://abonelikfiyatlari.com/servis/spotify",
+   "not": "Öğrenci doğrulaması gerekir",
+   "kosul": "ogrenci"
+  },
+  {
+   "platform": "spotify",
+   "paket": "Duo",
+   "fiyat": 159,
+   "kisi_sayisi": 2,
+   "kaynak": "https://abonelikfiyatlari.com/servis/spotify",
+   "not": "Aynı adreste 2 kişi"
+  },
+  {
+   "platform": "spotify",
+   "paket": "Aile",
+   "fiyat": 199,
+   "kisi_sayisi": 6,
+   "kaynak": "https://abonelikfiyatlari.com/servis/spotify",
+   "not": "Aynı adreste 6 kişiye kadar"
+  },
+  {
+   "platform": "youtube",
+   "paket": "Premium Lite",
+   "fiyat": 79.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://dijipedya.com/youtube-premium-nasil-paylasilir-aile-uyeligi-ve-davet-rehberi/",
+   "not": "Müzik ve arka planda oynatma yok"
+  },
+  {
+   "platform": "youtube",
+   "paket": "Öğrenci",
+   "fiyat": 79.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://dijipedya.com/youtube-premium-nasil-paylasilir-aile-uyeligi-ve-davet-rehberi/",
+   "not": "Öğrenci doğrulaması gerekir",
+   "kosul": "ogrenci"
+  },
+  {
+   "platform": "youtube",
+   "paket": "Bireysel",
+   "fiyat": 119.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://dijipedya.com/youtube-premium-nasil-paylasilir-aile-uyeligi-ve-davet-rehberi/"
+  },
+  {
+   "platform": "youtube",
+   "paket": "Aile",
+   "fiyat": 239.99,
+   "kisi_sayisi": 6,
+   "kaynak": "https://dijipedya.com/youtube-premium-nasil-paylasilir-aile-uyeligi-ve-davet-rehberi/",
+   "not": "Aynı adreste 6 kişiye kadar"
+  },
+  {
+   "platform": "prime",
+   "paket": "Prime (reklamlı)",
+   "fiyat": 69.9,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.amazon.com.tr/gp/help/customer/display.html?nodeId=G34EUPKVMYFW8N2U",
+   "not": "Prime Video + kargo avantajları"
+  },
+  {
+   "platform": "prime",
+   "paket": "Prime + Reklamsız",
+   "fiyat": 129.8,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.amazon.com.tr/gp/help/customer/display.html?nodeId=G34EUPKVMYFW8N2U",
+   "not": "69,90 TL üyelik + 59,90 TL reklamsız eki"
+  },
+  {
+   "platform": "disney",
+   "paket": "Reklamlı",
+   "fiyat": 249.9,
+   "kisi_sayisi": 4,
+   "kaynak": "https://www.karekod.org/blog/disney-plus-fiyati/"
+  },
+  {
+   "platform": "disney",
+   "paket": "Reklamsız",
+   "fiyat": 449.9,
+   "kisi_sayisi": 4,
+   "kaynak": "https://www.karekod.org/blog/disney-plus-fiyati/"
+  },
+  {
+   "platform": "apple",
+   "paket": "Öğrenci",
+   "fiyat": 49.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://uniconnectly.com/blog/apple-music-ogrenci-indirimi",
+   "not": "Öğrenci doğrulaması gerekir",
+   "kosul": "ogrenci"
+  },
+  {
+   "platform": "apple",
+   "paket": "Bireysel",
+   "fiyat": 89.99,
+   "kisi_sayisi": 1,
+   "kaynak": "https://uniconnectly.com/blog/apple-music-ogrenci-indirimi"
+  },
+  {
+   "platform": "apple",
+   "paket": "Aile",
+   "fiyat": 149.99,
+   "kisi_sayisi": 6,
+   "kaynak": "https://uniconnectly.com/blog/apple-music-ogrenci-indirimi",
+   "not": "6 kişiye kadar"
+  },
+  {
+   "platform": "exxen",
+   "paket": "Reklamlı",
+   "fiyat": 219,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
+   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "dogrulandi": false
+  },
+  {
+   "platform": "exxen",
+   "paket": "Reklamsız",
+   "fiyat": 309,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
+   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "dogrulandi": false
+  },
+  {
+   "platform": "exxen",
+   "paket": "ExxenSpor Reklamsız",
+   "fiyat": 499,
+   "kisi_sayisi": 1,
+   "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
+   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "dogrulandi": false
+  }
+ ],
+ "firsatlar": [
+  {
+   "platform": "spotify",
+   "baslik": "3 ay %50 indirim",
+   "kod": "[KUPON KODU]",
+   "bitis": "2026-11-30",
+   "ornek": true
+  },
+  {
+   "platform": "youtube",
+   "baslik": "Öğrenci paketinde 1 ay ücretsiz",
+   "kod": "[KUPON KODU]",
+   "bitis": "2026-12-15",
+   "ornek": true
+  }
+ ]
+}
