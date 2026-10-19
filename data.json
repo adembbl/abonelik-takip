@@ -1,0 +1,9 @@
+{"guncelleme":null,
+"fiyatlar":[
+{"platform":"spotify","paket":"Bireysel","fiyat":99,"kisi_sayisi":1,"ornek":true},
+{"platform":"spotify","paket":"Duo","fiyat":129,"kisi_sayisi":2,"ornek":true},
+{"platform":"spotify","paket":"Aile","fiyat":159,"kisi_sayisi":6,"ornek":true},
+{"platform":"spotify","paket":"Öğrenci","fiyat":49,"kisi_sayisi":1,"ornek":true}],
+"firsatlar":[
+{"platform":"spotify","baslik":"3 ay %50 indirim","kod":"[KUPON KODU]","bitis":"2026-11-30","ornek":true},
+{"platform":"youtube","baslik":"Öğrenci paketinde 1 ay ücretsiz","kod":"[KUPON KODU]","bitis":"2026-12-15","ornek":true}]}
