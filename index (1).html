@@ -1,0 +1,89 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Abonelik Takip</title>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#070A12"><link rel="apple-touch-icon" href="icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#F2F5FB;font-family:"Space Grotesk",system-ui,sans-serif;color-scheme:dark;background:radial-gradient(circle at 12% 0,rgba(45,226,230,.5),transparent 40%),radial-gradient(circle at 100% 30%,rgba(139,92,255,.5),transparent 45%),radial-gradient(circle at 10% 95%,rgba(255,80,170,.3),transparent 40%),#070A12;background-attachment:fixed}
+main{max-width:480px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 28px) 20px 120px;display:flex;flex-direction:column;gap:14px}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.15),rgba(255,255,255,.05));-webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 10px 30px rgba(0,0,0,.35);border-radius:24px;padding:16px}
+.hero{background:linear-gradient(135deg,rgba(45,226,230,.32),rgba(139,92,255,.32))}.hi{border:1.5px solid rgba(45,226,230,.85)}
+.mut{color:#B9C2D6;font-size:13px}h1{margin:0;font-size:26px;letter-spacing:-.5px}h2{margin:0;font-size:16px}b{font-weight:700}
+.row{display:flex;align-items:center;gap:12px}.sp{justify-content:space-between}.col{display:flex;flex-direction:column;gap:12px}
+.logo{width:40px;height:40px;border-radius:23%;object-fit:cover;flex:none;display:flex;align-items:center;justify-content:center;font-weight:700;color:#050912;box-shadow:0 4px 14px rgba(0,0,0,.35)}.logo.sm{width:32px;height:32px}.logo.on{box-shadow:0 0 0 2px #fff,0 0 18px rgba(45,226,230,.8)}
+button,input,select{font-family:inherit}
+.btn{border:0;border-radius:16px;min-height:52px;background:linear-gradient(135deg,#2DE2E6,#8B7CFF);color:#050912;font-weight:700;font-size:16px;width:100%}
+.chip{border:1px solid rgba(255,255,255,.2);border-radius:999px;min-height:44px;padding:0 16px;background:rgba(255,255,255,.1);font-weight:600;font-size:14px;color:#F2F5FB}.chip.on{background:linear-gradient(135deg,#2DE2E6,#8B7CFF);border-color:transparent;color:#050912}
+.seg{display:flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:4px}.seg button{flex:1;border:0;background:transparent;border-radius:10px;min-height:44px;font-weight:600;font-size:14px;color:#B9C2D6}.seg button.on{background:rgba(255,255,255,.22);color:#fff}
+.in{display:block;width:100%;min-height:48px;margin-top:4px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);color:#F2F5FB;border-radius:14px;padding:0 12px;font-size:16px}
+.mini{flex:1;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:10px}.mini div{font-size:12px;color:#D5DCEA}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.pk{background:none;border:0;color:#B9C2D6;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:44px}
+.code{border:1.5px dashed rgba(255,255,255,.55);color:#9DF6F8;border-radius:12px;padding:10px 14px;font-weight:700;letter-spacing:1px}
+.x{background:none;border:0;color:#B9C2D6;font-size:22px;min-width:44px;min-height:44px}.tag{font-size:11px;background:rgba(255,255,255,.18);border-radius:8px;padding:2px 6px}
+.nav{position:fixed;left:0;right:0;bottom:0;height:calc(88px + env(safe-area-inset-bottom));padding:0 8px calc(16px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr 76px 1fr 1fr;align-items:end;background:linear-gradient(180deg,rgba(10,14,24,.55),rgba(10,14,24,.92));-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);border-top:1px solid rgba(255,255,255,.14)}
+.nav button{background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:48px;font-size:11px;font-weight:600;color:#B9C2D6;position:relative}.nav .on{color:#2DE2E6}.nav .on::after{content:"";position:absolute;top:-9px;width:22px;height:3px;border-radius:2px;background:#2DE2E6;box-shadow:0 0 10px #2DE2E6}
+.nav .add{width:60px;height:60px;border-radius:50%;margin:0 auto 6px;transform:translateY(-16px);background:linear-gradient(135deg,#2DE2E6,#8B7CFF);color:#050912;box-shadow:0 8px 24px rgba(45,226,230,.45),0 0 0 6px #0A0E18}.nav .add::after{display:none}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #2DE2E6;outline-offset:2px}
+</style></head><body><main id="v"></main><nav class="nav" id="nav"></nav>
+<script>
+const P={netflix:{n:'Netflix',l:'netflix.png',c:'#E50914'},spotify:{n:'Spotify',l:'spotify.png',c:'#1DB954'},youtube:{n:'YouTube Premium',l:'youtube.png',c:'#FF8A3D'},prime:{n:'Prime Video',l:'prime.png',c:'#00A8E1'},disney:{n:'Disney+',l:'disney.png',c:'#3D63F0'},apple:{n:'Apple Music',c:'#FA233B'},exxen:{n:'Exxen',c:'#F5C400'},diger:{n:'Diğer',c:'#8B7CFF'}};
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const tl=n=>'₺'+Math.round(n).toLocaleString('tr-TR');
+let subs=JSON.parse(localStorage.getItem('abo')||'[]'),data={fiyatlar:[],firsatlar:[],guncelleme:null},tab='ozet',cmpP='spotify',cmpN=1,cmpS=false,f={p:'spotify',per:'aylik',paket:'',tutar:'',sonraki:''};
+const save=()=>localStorage.setItem('abo',JSON.stringify(subs));
+const mo=s=>s.periyot==='haftalik'?s.tutar*52/12:s.periyot==='yillik'?s.tutar/12:s.tutar;
+const today=()=>{const t=new Date();t.setHours(0,0,0,0);return t};
+const step=(d,p)=>{const x=new Date(d);p==='haftalik'?x.setDate(x.getDate()+7):p==='yillik'?x.setFullYear(x.getFullYear()+1):x.setMonth(x.getMonth()+1);return x};
+function nextDate(s){let d=new Date(s.sonraki+'T00:00:00'),i=0;while(d<today()&&i<500){d=step(d,s.periyot);i++}return d}
+const when=d=>{const n=Math.round((d-today())/864e5);return n===0?'bugün':n===1?'yarın':n+' gün sonra'};
+const logo=(k,c='')=>P[k].l?`<img class="logo ${c}" src="${P[k].l}" alt="${P[k].n}">`:`<div class="logo ${c}" style="background:${P[k].c}">${P[k].n[0]}</div>`;
+const ico=(p,s=22,w=2)=>`<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+function ozet(){
+ if(!subs.length)return `<h1>Aboneliklerim</h1><div class="card col" style="align-items:center;text-align:center"><b>Henüz abonelik yok</b><span class="mut">İlk aboneliğini ekleyerek toplam giderini gör.</span><button class="btn" data-a="tab" data-v="ekle">Abonelik ekle</button></div>`;
+ const m=subs.reduce((a,s)=>a+mo(s),0),sorted=[...subs].sort((a,b)=>mo(b)-mo(a));
+ return `<div><div class="mut">Toplam gider</div><h1>Aboneliklerim</h1></div>
+ <div class="card hero"><div class="mut" style="color:#E3E9F5">Aylık</div><div style="font-size:40px;font-weight:700;letter-spacing:-1px;margin:4px 0 12px">${tl(m)}</div>
+ <div class="row" style="gap:8px"><div class="mini"><div>Haftalık</div><b>${tl(m*12/52)}</b></div><div class="mini"><div>Aylık</div><b>${tl(m)}</b></div><div class="mini"><div>Yıllık</div><b>${tl(m*12)}</b></div></div></div>
+ <div class="card"><div class="row sp" style="margin-bottom:10px"><h2>Dağılım</h2><span class="mut">${subs.length} abonelik</span></div>
+ <div style="display:flex;height:10px;border-radius:6px;overflow:hidden;margin-bottom:10px">${sorted.map(s=>`<div style="width:${mo(s)/m*100}%;background:${P[s.platform].c}"></div>`).join('')}</div>
+ ${sorted.map(s=>`<div class="row sp" style="min-height:52px"><div class="row" style="min-width:0">${logo(s.platform,'sm')}<div style="min-width:0"><div>${esc(P[s.platform].n)} <span class="mut">${esc(s.paket)}</span></div><div class="mut">${when(nextDate(s))}${(c=>c&&s.periyot==='aylik'&&c.fiyat>s.tutar?` · güncel ${tl(c.fiyat)}`:'')(data.fiyatlar.find(x=>x.platform===s.platform&&x.paket===s.paket))}</div></div></div><div class="row" style="gap:0"><b>${tl(s.tutar)}</b><button class="x" data-a="del" data-v="${s.id}" aria-label="${esc(P[s.platform].n)} aboneliğini sil">×</button></div></div>`).join('')}</div>`;
+}
+function ekle(){
+ const pl=data.fiyatlar.map((x,i)=>[x,i]).filter(([x])=>x.platform===f.p);
+ return `<h1>Abonelik ekle</h1><div class="grid">${Object.keys(P).map(k=>`<button class="pk" data-a="pick" data-v="${k}">${logo(k,f.p===k?'on':'')}${P[k].n.split(' ')[0]}</button>`).join('')}</div>
+ ${pl.length?`<div class="card col"><div class="row sp"><h2>Paket seç</h2><span class="mut">${data.guncelleme?'Fiyatlar: '+new Date(data.guncelleme+'T00:00:00').toLocaleDateString('tr-TR',{day:'numeric',month:'long'}):''}</span></div>${pl.map(([x,i])=>`<button class="chip ${f.paket===x.paket&&parseFloat(String(f.tutar).replace(',','.'))===x.fiyat?'on':''}" style="display:flex;justify-content:space-between;width:100%;text-align:left" data-a="plan" data-v="${i}"><span>${esc(x.paket)}</span><b>${tl(x.fiyat)}</b></button>`).join('')}<div class="mut">Paketi seçince tutar otomatik dolar. Dilersen aşağıdan elle değiştirebilirsin.</div></div>`:''}
+ <div class="card col"><label class="mut">Paket<input class="in" id="paket" value="${esc(f.paket)}" placeholder="Örn. Bireysel"></label>
+ <label class="mut">Tutar (₺)<input class="in" id="tutar" inputmode="decimal" value="${esc(f.tutar)}" placeholder="0"></label>
+ <div><div class="mut" style="margin-bottom:4px">Ödeme sıklığı</div><div class="seg">${[['haftalik','Haftalık'],['aylik','Aylık'],['yillik','Yıllık']].map(([k,t])=>`<button data-a="per" data-v="${k}" class="${f.per===k?'on':''}">${t}</button>`).join('')}</div></div>
+ <label class="mut">Sonraki ödeme tarihi<input class="in" id="sonraki" type="date" value="${f.sonraki}"></label></div>
+ <button class="btn" data-a="save">Aboneliği kaydet</button>`;
+}
+function karsilastir(){
+ const ks=Object.keys(P).filter(k=>data.fiyatlar.some(x=>x.platform===k)),all=data.fiyatlar.filter(x=>x.platform===cmpP&&x.kisi_sayisi>=cmpN),plans=all.filter(x=>cmpS||!x.kosul).sort((a,b)=>a.fiyat-b.fiyat),mine=subs.filter(s=>s.platform===cmpP).reduce((a,s)=>a+mo(s),0);
+ return `<div><div class="mut">${P[cmpP]?P[cmpP].n:''} için</div><h1>En uygun paket</h1></div>
+ <div class="row" style="gap:8px;flex-wrap:wrap">${ks.map(k=>`<button class="chip ${k===cmpP?'on':''}" data-a="cp" data-v="${k}">${P[k].n}</button>`).join('')}</div>
+ <div><div class="mut" style="margin-bottom:4px">Kaç kişi / ekran kullanacak?</div><div class="seg">${[[1,'1'],[2,'2'],[4,'3-4'],[6,'5-6']].map(([n,t])=>`<button data-a="cn" data-v="${n}" class="${cmpN===n?'on':''}">${t}</button>`).join('')}</div></div>
+ <label class="row sp mut"><span>Öğrenciyim (öğrenci paketlerini göster)</span><input type="checkbox" data-a="cs" ${cmpS?'checked':''} style="width:24px;height:24px;accent-color:#2DE2E6"></label>
+ ${plans.map((p,i)=>`<div class="card ${i?'':'hi'}">${i?'':'<b style="color:#9DF6F8;font-size:13px">SANA EN UYGUN</b>'}<div class="row sp"><h2 style="font-size:20px">${esc(p.paket)}</h2><div style="font-size:24px;font-weight:700">${tl(p.fiyat)}<span class="mut"> /ay</span></div></div><div class="mut" style="margin-top:4px">Kişi başı ${tl(p.fiyat/cmpN)}${p.not?' · '+esc(p.not):''}${p.dogrulandi===false?' · <span class="tag">doğrulanmadı</span>':''}</div>${i||!mine||mine<=p.fiyat?'':`<div style="margin-top:8px;color:#9DF6F8">Şu an ödediğinden ayda ${tl(mine-p.fiyat)} daha ucuz</div>`}${p.kaynak?`<a class="mut" style="color:#9DF6F8" target="_blank" rel="noopener" href="${esc(p.kaynak)}">Kaynak</a>`:''}</div>`).join('')||'<div class="card mut">Bu seçim için uygun paket bulunamadı.</div>'}`;
+}
+function firsatlar(){
+ const tg='<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/>';
+ return `<h1>Fırsatlar</h1>${data.firsatlar.map(x=>`<div class="card"><div class="row">${P[x.platform]?logo(x.platform):`<div class="logo" style="background:rgba(255,255,255,.14);color:#fff">${ico(tg)}</div>`}<div style="flex:1"><b>${esc(x.baslik)}</b><div class="mut">${esc(x.etiket||(P[x.platform]?P[x.platform].n:''))}</div></div></div>${x.aciklama?`<div class="mut" style="margin-top:10px">${esc(x.aciklama)}</div>`:''}${x.kod?`<div class="row sp" style="margin-top:12px"><div class="code">${esc(x.kod)}</div><button class="chip on" data-a="copy" data-v="${esc(x.kod)}">Kopyala</button></div>`:''}${x.bitis?`<div class="mut" style="margin-top:8px">Son gün: ${new Date(x.bitis+'T00:00:00').toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric'})}</div>`:''}${x.kaynak?`<a class="mut" style="color:#9DF6F8;display:block;margin-top:6px" target="_blank" rel="noopener" href="${esc(x.kaynak)}">Kaynak</a>`:''}</div>`).join('')||'<div class="card mut">Şu an kayıtlı fırsat yok.</div>'}${data.guncelleme?`<div class="mut" style="text-align:center">Derleme tarihi: ${new Date(data.guncelleme+'T00:00:00').toLocaleDateString('tr-TR',{day:'numeric',month:'long'})}. Katılmadan önce kaynakta geçerliliği kontrol et.</div>`:''}`;
+}
+function ayar(){
+ return `<h1>Ayarlar</h1><div class="card col"><div class="mut">Fiyat verisi son güncelleme: ${data.guncelleme?new Date(data.guncelleme+'T00:00:00').toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric'}):'henüz yok'}</div><button class="chip" data-a="export">Aboneliklerimi kopyala (yedek)</button><button class="chip" data-a="reset">Tüm aboneliklerimi sil</button></div>`;
+}
+const V={ozet,ekle,karsilastir,firsatlar,ayar},N=[['ozet','Özet','<path d="M4 11l8-7 8 7v9H4z"/>'],['karsilastir','Karşılaştır','<path d="M6 20V11M12 20V5M18 20v-7"/>'],['ekle','','<path d="M12 5v14M5 12h14"/>'],['firsatlar','Fırsatlar','<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/>'],['ayar','Ayarlar','<circle cx="12" cy="8" r="3.5"/><path d="M5 20c1-4 4-6 7-6s6 2 7 6"/>']];
+function render(){$('#v').innerHTML=V[tab]();$('#nav').innerHTML=N.map(([k,t,p])=>k==='ekle'?`<button class="add ${tab===k?'on':''}" data-a="tab" data-v="ekle" aria-label="Abonelik ekle">${ico(p,26,2.6)}</button>`:`<button class="${tab===k?'on':''}" data-a="tab" data-v="${k}">${ico(p)}${t}</button>`).join('')}
+document.addEventListener('input',e=>{const i=e.target.id;if(i==='paket'||i==='tutar'||i==='sonraki')f[i]=e.target.value});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b)return;if(b.type==='checkbox'&&b.dataset.a!=='cs')return;const a=b.dataset.a,v=b.dataset.v;
+ if(a==='tab'){tab=v;scrollTo(0,0)}else if(a==='pick'){f.p=v;f.paket='';f.tutar=''}else if(a==='plan'){const x=data.fiyatlar[+v];f.paket=x.paket;f.tutar=String(x.fiyat).replace('.',',');f.per='aylik'}else if(a==='cs'){cmpS=b.checked}else if(a==='per'){f.per=v}else if(a==='cp'){cmpP=v}else if(a==='cn'){cmpN=+v}
+ else if(a==='del'){if(!confirm('Bu aboneliği silmek istiyor musun?'))return;subs=subs.filter(s=>s.id!==v);save()}
+ else if(a==='save'){const t=parseFloat(String(f.tutar).replace(',','.'));if(!(t>0)||!f.sonraki){alert('Tutarı ve sonraki ödeme tarihini gir.');return}
+  subs.push({id:String(Date.now()),platform:f.p,paket:f.paket||'—',tutar:t,periyot:f.per,sonraki:f.sonraki,hatirlat:true});save();f={p:'spotify',per:'aylik',paket:'',tutar:'',sonraki:''};tab='ozet'}
+ else if(a==='copy'){navigator.clipboard&&navigator.clipboard.writeText(v);b.textContent='Kopyalandı';return}
+ else if(a==='export'){navigator.clipboard&&navigator.clipboard.writeText(JSON.stringify(subs));b.textContent='Kopyalandı';return}
+ else if(a==='reset'){if(!confirm('Tüm abonelikler silinecek. Emin misin?'))return;subs=[];save()}
+ render()});
+fetch('https://raw.githubusercontent.com/adembbl/abonelik-takip/main/data.json?'+Date.now()).then(r=>{if(!r.ok)throw 0;return r}).catch(()=>fetch('data.json?'+Date.now())).then(r=>r.json()).then(d=>{data=d;if(!data.fiyatlar.some(x=>x.platform===cmpP)&&data.fiyatlar[0])cmpP=data.fiyatlar[0].platform;render()}).catch(()=>{});
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
+render();
+</script></body></html>

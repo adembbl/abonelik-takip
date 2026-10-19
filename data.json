@@ -149,7 +149,7 @@
    "fiyat": 219,
    "kisi_sayisi": 1,
    "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
-   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "not": "Güncel olmayabilir: Ağustos 2026'da kullanıcılar ₺388 çekim bildirdi, Exxen'den kontrol et",
    "dogrulandi": false
   },
   {
@@ -158,7 +158,7 @@
    "fiyat": 309,
    "kisi_sayisi": 1,
    "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
-   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "not": "Güncel olmayabilir: Ağustos 2026'da kullanıcılar ₺388 çekim bildirdi, Exxen'den kontrol et",
    "dogrulandi": false
   },
   {
@@ -167,24 +167,77 @@
    "fiyat": 499,
    "kisi_sayisi": 1,
    "kaynak": "https://www.karekod.org/blog/exxen-uyelik-ucretleri-exxenspor-fiyati/",
-   "not": "Fiyat 2026 başı kaynaklara dayanıyor",
+   "not": "Güncel olmayabilir: Ağustos 2026'da kullanıcılar ₺388 çekim bildirdi, Exxen'den kontrol et",
    "dogrulandi": false
   }
  ],
  "firsatlar": [
   {
+   "platform": "genel",
+   "etiket": "Akbank Kart · Netflix, YouTube, Disney+, Exxen, Spotify",
+   "baslik": "Dijital platform ödemelerinde %25 indirim",
+   "aciklama": "Akbank Kart ve debit kartla ödemelerde geçerli. Aylık en fazla 100 TL indirim kazanılır.",
+   "kod": null,
+   "bitis": "2026-12-31",
+   "kaynak": "https://www.akbank.com/1e1-bankacilik/ayricaliklar-dunyasi/dijital-platform-ayricaligi"
+  },
+  {
    "platform": "spotify",
-   "baslik": "3 ay %50 indirim",
-   "kod": "[KUPON KODU]",
-   "bitis": "2026-11-30",
-   "ornek": true
+   "baslik": "Yeni üyelere ilk ay ücretsiz",
+   "aciklama": "Premium'a daha önce üye olmamış kullanıcılar için, Bireysel ve Öğrenci paketlerinde. Deneme sonrası aylık ücret alınır.",
+   "kod": null,
+   "bitis": null,
+   "kaynak": "https://onedio.com/haber/spotify-turkiye-ye-zam-geldi-bireysel-premium-115-tl-aile-paketi-199-tl-oldu-1385354"
   },
   {
    "platform": "youtube",
-   "baslik": "Öğrenci paketinde 1 ay ücretsiz",
-   "kod": "[KUPON KODU]",
-   "bitis": "2026-12-15",
-   "ornek": true
+   "baslik": "İlk kez Premium alanlara 1 ay ücretsiz",
+   "aciklama": "Daha önce Premium kullanmamış hesaplar için. Deneme bitince ücret otomatik çekilir.",
+   "kod": null,
+   "bitis": null,
+   "kaynak": "https://uniconnectly.com/blog/youtube-premium-ogrenci-indirimi"
+  },
+  {
+   "platform": "youtube",
+   "etiket": "YouTube Premium · Türk Telekom Prime",
+   "baslik": "Türk Telekom Prime müşterilerine 3 ay ücretsiz",
+   "aciklama": "Seçili Mobil Prime tarifelerinde. Katılmak için YOUTUBE yazıp 5555'e SMS gönderilir.",
+   "kod": null,
+   "bitis": "2027-08-30",
+   "kaynak": "https://bireysel.turktelekom.com.tr/mobil/kampanyalar/turk-telekom-primela-3-ay-boyunca-ucretsiz-youtube-premium"
+  },
+  {
+   "platform": "prime",
+   "baslik": "Yeni üyelere ilk 30 gün ücretsiz",
+   "aciklama": "Uygun yeni kullanıcılar için. Deneme bitmeden iptal edilmezse üyelik ücretli devam eder.",
+   "kod": null,
+   "bitis": null,
+   "kaynak": "https://www.karekod.org/blog/amazon-prime-ucretleri/"
+  },
+  {
+   "platform": "disney",
+   "etiket": "Disney+ · Arçelik",
+   "baslik": "Seçili Arçelik küçük ev aletlerinde Disney+ üyeliği hediye",
+   "aciklama": "7.500 TL altı ürünlerde 6 ay, 7.500 TL ve üzerinde 12 ay hediye. Süre sonunda üyelik güncel fiyattan yenilenir.",
+   "kod": null,
+   "bitis": "2026-12-31",
+   "kaynak": "https://www.arcelik.com.tr/kampanyalar/kucuk-ev-aletleri-kampanyalari/arcelikten-kucuk-ev-aletleri-alanlara-6-ay-disney-uyeligi-hediye"
+  },
+  {
+   "platform": "apple",
+   "baslik": "Yeni abonelere ilk ay ücretsiz",
+   "aciklama": "Daha önce Apple Music kullanmamış hesaplar için, Öğrenci, Bireysel ve Aile planlarında.",
+   "kod": null,
+   "bitis": null,
+   "kaynak": "https://uniconnectly.com/blog/apple-music-ogrenci-indirimi"
+  },
+  {
+   "platform": "exxen",
+   "baslik": "7 gün için 1 TL deneme",
+   "aciklama": "Deneme sonunda üyelik otomatik yenilenir, kullanıcılar yüksek tutarlı çekim bildirmiş. Devam etmeyeceksen süre bitmeden iptal et. Spor yayınlarını kapsamaz.",
+   "kod": null,
+   "bitis": null,
+   "kaynak": "https://plan.exxen.com/"
   }
  ]
 }
